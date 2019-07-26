@@ -4,7 +4,7 @@
 			<h1>{{ .Title }}</h1>
 			{{ if .Params.Date }}
 				<time>
-					{{ .Date.Format "02.01.2006 15:04" }}
+					{{ .Date.Format "02/01/2006" }}
 			</time>
 			{{ end }}
 			<div>
@@ -13,12 +13,11 @@
 			<div>
 				<ul id="tags">
 					{{ range .Params.tags }}
-					<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
+						<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
 					{{ end }}
 				</ul>
 			</div>
 			<div>
-				{{ template "_internal/disqus.html" . }}
 			</div>
 		</article>
 	</main>
