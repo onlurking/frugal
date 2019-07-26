@@ -1,0 +1,12 @@
+name = "Frugal"
+license = "MIT"
+licenselink = "https://github.com/onlurking/frugal/blob/master/LICENSE.md"
+description = "Clean and minimalist theme for hugo."
+homepage = "https://github.com/onlurking/frugal/"
+tags = ["blog", "plain", "minimal", "minimalist", "clean"]
+features = ["blog"]
+min_version = 0.19
+
+[author]
+  name = "Diogo Felix"
+  homepage = "https://github.com/onlurking"
