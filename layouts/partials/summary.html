@@ -3,10 +3,7 @@
 			<a href="{{ .Permalink }}">{{ .Title }}</a>
 		</h1>
 		<div>
-			{{ .Params.Summary }}
-			{{ if .Truncated }}
-				<a href="{{ .Permalink }}"><br>Read more...</a>
-			{{ end }}
+      {{ .Params.Summary }}
 		</div>
 		<strong>Date</strong>: <time>{{ .Date.Format "02/01/2006" }}</time>
 		{{ range $index, $value := .Params.tags }}
