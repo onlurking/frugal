@@ -35,6 +35,7 @@ ul li, ol li {
 }
 
 .post__title {
+  font-size: 28px;
   margin-top: 32px;
 }
 
