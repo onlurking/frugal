@@ -7,6 +7,11 @@
   vertical-align: inherit;
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
 body {
   color: #444;
   font: 16px/1.5 "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -43,9 +48,13 @@ ul li, ol li {
   margin-top: 32px;
 }
 
+a:hover {
+  border-bottom: 2px solid #2d2d2d;
+  padding-bottom: 2px;
+}
+
 a, a:visited {
 	color: inherit;
-  transition: all 0.5s ease;
 	text-decoration: none currentcolor solid;
 }
 
@@ -53,13 +62,9 @@ article a, article a:visited {
   border-bottom: 2px solid #e6e6e6;
   color: inherit;
   cursor: pointer;
-  padding-bottom: 1px;
+  padding-bottom: 2px;
   text-decoration: none currentcolor solid;
   touch-action: manipulation;
-}
-
-a:hover {
-  color: dodgerblue;
 }
 
 article a:active, article a:focus {
