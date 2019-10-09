@@ -5,9 +5,4 @@
 		<div>
       {{ .Params.Summary }}
 		</div>
-		<strong>Date</strong>: <time>{{ .Date.Format "02/01/2006" }}</time>
-		{{ range $index, $value := .Params.tags }}
-			{{ if (eq $index 0) }}<br><strong>Tags</strong>: {{ end }}
-			<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-		{{ end }}
 	</article>
