@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode | default "en-us" }}">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>{{ .Title }}</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>{{ .Title }}</title>
   {{ with .Site.Params.description }}
-    <meta name="description" content="{{ . }}">
+	<meta name="description" content="{{ . }}" />
+	{{ end }} 
+	{{ with .Site.Params.author }}
+		<meta name="author" content="{{ . }}" />
   {{ end }}
-  {{ with .Site.Params.author }}
-    <meta name="author" content="{{ . }}">
-  {{ end }}
-	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
-	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css" />
 
-	{{ with .OutputFormats.Get "RSS" }}
-		<link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml">
-	{{ end }}
+  {{ with .OutputFormats.Get "RSS" }}
+  <link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" />
+  {{ end }}
 </head>
-<body>
-	<header class="header">
-		<div>
-			<a href="{{ .Site.BaseURL }}">
-			  <img src="{{ .Site.BaseURL }}images/icon.png" alt="Site logo" class='header__logo'>
-			</a>
-			<a href="{{ .Site.BaseURL }}">
-			  <strong class="header__title">{{ .Site.Title }}</strong>
-			</a>
-		</div>
-		T-Shaped Developer
-		<nav>
-			<ul class="navbar">
-				{{ range .Site.Menus.main }}
-				<li>
-					<a href="{{ .URL | relURL }}">{{ .Name }}</a>
-				</li>
-				{{ end }}
-			</ul>
-		</nav>
-	</header>
+  <header class="header">
+    <div>
+      <a href="{{ .Site.BaseURL }}" class="no-highlight">
+        <img
+          src="{{ .Site.BaseURL }}images/icon.png"
+          alt="Site logo"
+          class="header__logo"
+        />
+        <strong class="header__title">{{ .Site.Title }}</strong>
+      </a>
+    </div>
+    T-Shaped Developer
+    <nav>
+      <ul class="navbar">
+        {{ range .Site.Menus.main }}
+        <li>
+          <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </nav>
+  </header>
